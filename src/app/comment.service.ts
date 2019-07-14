@@ -16,4 +16,7 @@ export class CommentService {
   getCommentsByPostId(id: number): Observable<Comment> {
     return this.http.get<Comment>(`${this.API_URL}?postId=${id}`);
   }
+  getCommentById(id: number): Observable<Comment> {
+    return this.http.get<Comment>(`${this.API_URL}/${id}`);
+  }
 }
