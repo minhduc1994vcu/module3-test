@@ -54,10 +54,8 @@
           Comment id: {{comment.id}} - {{comment.name}}
         </a>
       </h4>
-
+      <a [routerLink]="['/comment',comment.id,'edit']">Edit</a>  |
       <button (click)="deleteComment(i)"> Delete</button>
-
-
     </li>
   </ul>
 </div>
