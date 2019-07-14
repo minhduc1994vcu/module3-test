@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogEditComponent } from './blog-edit/blog-edit.component';
+import { CommentDetailComponent } from './comment-detail/comment-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
     BlogEditComponent,
-    BlogDetailComponent
+    BlogDetailComponent,
+    CommentDetailComponent
   ],
   imports: [
     BrowserModule,
