@@ -25,4 +25,7 @@ export class CommentService {
   createComment(comment: Partial<Comment>): Observable<Comment> {
     return this.http.post<Comment>(this.API_URL, comment);
   }
+  updateComment(comment: Comment): Observable<Comment> {
+    return this.http.put<Comment>(`${this.API_URL}/${comment.id}`, comment);
+  }
 }
