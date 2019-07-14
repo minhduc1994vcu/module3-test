@@ -37,4 +37,10 @@ export class BlogDetailComponent implements OnInit {
         );
       });
   }
+  deleteComment(i) {
+    const comment = this.comments[i];
+    this.commentService.deleteComment(comment.id).subscribe(() => {
+      this.comments = this.comments.filter(t => t.id !== comment.id);
+    });
+  }
 }
