@@ -36,16 +36,16 @@ export class BlogDetailComponent implements OnInit {
     this.postService.getPostById(id).subscribe(
       next => {
         this.post = next;
+        this.commentService.getCommentsByPostId(id).subscribe( comments => {
+          // @ts-ignore
+          this.comments = comments;
+        });
       },
       error => {
         console.log(error);
         this.post = null;
       }
     );
-    // @ts-ignore
-    this.commentService.getAllComment().subscribe(data => {
-      this.comments = data;
-    });
   }
   onSubmit() {
     if (this.commentForm.valid) {
