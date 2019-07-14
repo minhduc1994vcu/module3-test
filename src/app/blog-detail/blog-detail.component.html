@@ -13,8 +13,11 @@
   <ul>
     <li *ngFor="let comment of comments; index as i">
       <h4>
+        <a [routerLink]="['/comment', comment.id]">
           Comment id: {{comment.id}} - {{comment.name}}
+        </a>
       </h4>
+
     </li>
   </ul>
 </div>
